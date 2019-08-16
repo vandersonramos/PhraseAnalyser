@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+
+        <h3 class="message">
+            Your Phrase: {{ text_message }}
+        </h3>
+
+        <p>
+            <a href="/"> Try another phrase </a>
+        </p>
+
+        <table>
+            <thead>
+                <tr class="table-head">
+                    <th class="p-3">Character Symbol</th>
+                    <th class="p-3">Occurrences</th>
+                    <th class="p-3">Before</th>
+                    <th class="p-3">After</th>
+                    <th class="p-3">Distance</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for letter, item in infoData %}
+                <tr>
+                    <td class="p-3">{{ letter }}</td>
+                    <td class="p-3">{{ item['total'] }}</td>
+                    <td class="p-3">{{ item['before'] }}</td>
+                    <td class="p-3">{{ item['after'] }}</td>
+                    <td class="p-3">{{ item['distance'] }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

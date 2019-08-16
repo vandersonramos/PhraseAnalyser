@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="form-wrapper">
+
+        <span class="form-title">
+            Enter your phrase
+        </span>
+
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+
+        <div class="wrap-form-btn">
+            <button class="form-btn" type="submit">
+                <span>
+                    Analyze!
+                </span>
+            </button>
+        </div>
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
