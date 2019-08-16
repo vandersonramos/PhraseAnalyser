@@ -1,7 +1,7 @@
 **Phrase analyser**
 
 
-Simple web application that will analyse customer input and provide some statistics.
+Simple Symfony web application that will analyse customer input and provide some statistics.
 
 
  - Step 1. Customer is asked to insert a string
@@ -20,3 +20,12 @@ f : 1 : before: o after: none
 o : 3 : before: o,t,c after: o,f,s max-distance: 10 chars
 t : 1 : before: b, after: o
 ```
+
+
+## Installation details
+
+1. Clone this repository: `git clone https://github.com/vandersonramos/PhraseAnalyser.git`
+2. Go to the project folder: `cd analyser`
+3. Run composer: `composer install`
+4. Run the server command: `symfony server:start` 
+
